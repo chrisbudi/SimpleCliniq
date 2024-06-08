@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  simplecliniq.api:
+    image: ${DOCKER_REGISTRY-}simplecliniqapi
+    build:
+      context: .
+      dockerfile: SimpleCliniq.Api/Dockerfile
