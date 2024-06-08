@@ -21,16 +21,15 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./SimpleCliniq.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
+
+
 FROM base AS final
-WORKDIR /app
-	
-COPY ${HOME}/.aspnet/https/aspnetapp.pfx /root/.aspnet/https/aspnetapp.pfx
+WORKDIR /app	
 
-# Set environment variables for the HTTPS certificate
+COPY ./aspnetapp.pfx /app/aspnetapp.pfx
+
 ENV ASPNETCORE_Kestrel__Certificates__Default__Password=secret
-ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/root/.aspnet/https/aspnetapp.pfx
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/app/aspnetapp.pfx
 
-
-RUN dotnet dev-certs https
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "SimpleCliniq.Api.dll"]
