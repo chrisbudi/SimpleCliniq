@@ -3,6 +3,7 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
+
 EXPOSE 8080
 EXPOSE 8081
 
@@ -22,14 +23,23 @@ ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./SimpleCliniq.Api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 
-
 FROM base AS final
 WORKDIR /app	
 
-COPY ./aspnetapp.pfx /app/aspnetapp.pfx
+USER root
+
+COPY ./SimpleCliniq.Api/aspnetapp.pfx /app/aspnetapp.pfx
+#RUN chmod 644 /app/
+#RUN chown root:root /app/aspnetapp.pfx && chmod 644 /app/aspnetapp.pfx
 
 ENV ASPNETCORE_Kestrel__Certificates__Default__Password=secret
 ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/app/aspnetapp.pfx
 
+
 COPY --from=publish /app/publish .
+
+RUN chmod -R 755 /app
+
 ENTRYPOINT ["dotnet", "SimpleCliniq.Api.dll"]
+
+#ENTRYPOINT ["dotnet", "SimpleCliniq.Api.dll"]
