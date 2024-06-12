@@ -20,7 +20,7 @@ COPY ["src/Common/SimpleCliniq.Common.Presentation/SimpleCliniq.Common.Presentat
 COPY ["src/Modules/Core/SimpleCliniq.Module.Core.Domain/SimpleCliniq.Module.Core.Domain.csproj", "Modules/Core/SimpleCliniq.Module.Core.Domain/"]
 COPY ["src/Modules/Core/SimpleCliniq.Module.Core.Infrastructure/SimpleCliniq.Module.Core.Infrastructure.csproj", "Modules/Core/SimpleCliniq.Module.Core.Infrastructure/"]
 
-RUN dotnet restore "./Api/SimpleCliniq.Api/SimpleCliniq.Api.csproj"
+RUN dotnet restore "./API/SimpleCliniq.Api/SimpleCliniq.Api.csproj"
 COPY . .
 WORKDIR "/src/API/SimpleCliniq.Api"
 RUN dotnet build "./SimpleCliniq.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
