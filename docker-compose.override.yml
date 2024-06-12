@@ -6,7 +6,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
       - ASPNETCORE_HTTPS_PORTS=8081
-      - ConnectionStrings__DefaultConnection=Server=simplecliniq.czwkw6ameocg.ap-southeast-1.rds.amazonaws.com;Database=db_simple_cliniq;User Id=postgres;Password=development()qwerty34
+      - DB_CONNECTION_STRING=Server=simplecliniq.czwkw6ameocg.ap-southeast-1.rds.amazonaws.com;Database=db_simple_cliniq;User Id=postgres;Password=development()qwerty34
       - ASPNETCORE_Kestrel__Certificates__Default__Password=secret
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/app/aspnetapp.pfx
     ports:
