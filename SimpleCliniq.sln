@@ -11,13 +11,30 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{EE28
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2AF43089-A6F1-491E-8BFE-40365E971783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCliniq.Module.Core.Infrastructure", "SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj", "{B1D7BD31-C112-464D-A12B-F46F2A75862C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Infrastructure", "SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj", "{B1D7BD31-C112-464D-A12B-F46F2A75862C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCliniq.Module.Core.Domain", "SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj", "{B69ECC25-57FC-441D-8422-1FA3613ACAC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Domain", "SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj", "{B69ECC25-57FC-441D-8422-1FA3613ACAC9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Api", "SimpleCliniq.Api\SimpleCliniq.Api.csproj", "{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8929B674-A721-47FB-B5C4-B4EA7FA9DF52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCliniq.Module.Core.Presentation", "..\SimpleCliniq.Module.Core.Presenter\SimpleCliniq.Module.Core.Presentation.csproj", "{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0C2E1581-A036-4813-8018-7E202D67F4C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Presentation", "SimpleCliniq.Common.Presentation\SimpleCliniq.Common.Presentation.csproj", "{848C78EE-39B1-4A14-A07D-31D0183BAEF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Domain", "SimpleCliniq.Common.Domain\SimpleCliniq.Common.Domain.csproj", "{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Infrastructure", "SimpleCliniq.Common.Infrastructure\SimpleCliniq.Common.Infrastructure.csproj", "{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Application", "SimpleCliniq.Common.Application\SimpleCliniq.Common.Application.csproj", "{FB9972DE-A424-491B-A4E2-EE660B794799}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB7F1962-72D8-487F-9D5B-F0CD50844335}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1B5CD0D9-9EE2-4154-A831-EF22982B67D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +54,30 @@ Global
 		{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8929B674-A721-47FB-B5C4-B4EA7FA9DF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8929B674-A721-47FB-B5C4-B4EA7FA9DF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8929B674-A721-47FB-B5C4-B4EA7FA9DF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8929B674-A721-47FB-B5C4-B4EA7FA9DF52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848C78EE-39B1-4A14-A07D-31D0183BAEF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848C78EE-39B1-4A14-A07D-31D0183BAEF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848C78EE-39B1-4A14-A07D-31D0183BAEF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848C78EE-39B1-4A14-A07D-31D0183BAEF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9972DE-A424-491B-A4E2-EE660B794799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9972DE-A424-491B-A4E2-EE660B794799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9972DE-A424-491B-A4E2-EE660B794799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9972DE-A424-491B-A4E2-EE660B794799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B5CD0D9-9EE2-4154-A831-EF22982B67D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5CD0D9-9EE2-4154-A831-EF22982B67D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5CD0D9-9EE2-4154-A831-EF22982B67D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5CD0D9-9EE2-4154-A831-EF22982B67D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +89,12 @@ Global
 		{B1D7BD31-C112-464D-A12B-F46F2A75862C} = {2AF43089-A6F1-491E-8BFE-40365E971783}
 		{B69ECC25-57FC-441D-8422-1FA3613ACAC9} = {2AF43089-A6F1-491E-8BFE-40365E971783}
 		{3C2188BB-28FE-40AC-BD43-653F40F4DEBB} = {B234B094-F8A0-4D55-9F12-2061783479A5}
+		{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6} = {2AF43089-A6F1-491E-8BFE-40365E971783}
+		{0C2E1581-A036-4813-8018-7E202D67F4C0} = {01BCE5AB-EA05-4335-87B2-5A4782BE248F}
+		{848C78EE-39B1-4A14-A07D-31D0183BAEF8} = {0C2E1581-A036-4813-8018-7E202D67F4C0}
+		{993BC39A-E02C-44F5-AC49-3B1A16B05DDC} = {0C2E1581-A036-4813-8018-7E202D67F4C0}
+		{6D23BE26-7D8D-44A1-9E88-53CF3DF57366} = {0C2E1581-A036-4813-8018-7E202D67F4C0}
+		{FB9972DE-A424-491B-A4E2-EE660B794799} = {0C2E1581-A036-4813-8018-7E202D67F4C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C4919457-445D-409D-9B4C-386030941F0C}

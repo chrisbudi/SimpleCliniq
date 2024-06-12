@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using SimpleCliniq.Common.Presentation.Endpoints;
 using SimpleCliniq.Module.Core.Infrastructure;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,12 +17,13 @@ services.AddDbContext<SimpleClinicContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
+services.AddEndpoints(Assembly.GetExecutingAssembly());
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+//services.AddEndpoints(Presentation.AssemblyReference.Assembly);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,5 +40,6 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
-
+//app.MapMDtdEndpoints();
+app.MapEndpoints();
 app.Run();
