@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SimpleCliniq.Module.Core.Infrastructure;
 
 namespace SimpleCliniq.Controllers
 {
@@ -24,14 +26,27 @@ namespace SimpleCliniq.Controllers
         [HttpGet(Name = "connectionstring")]
         public async Task<IActionResult> Get()
         {
-            //return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            //{
-            //    Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            //    TemperatureC = Random.Shared.Next(-20, 55),
-            //    Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            //})
-            //.ToArray();
-            return Ok(_config.GetConnectionString("DefaultConnection"));
+            // check database connected
+            var connectionString = _config.GetConnectionString("DefaultConnection");
+            var options = new DbContextOptionsBuilder<SimpleClinicContext>()
+                .UseNpgsql(connectionString)
+                .Options;
+
+            try
+            {
+                using (var context = new SimpleClinicContext(options))
+                {
+                    await context.Database.OpenConnectionAsync();
+                    await context.Database.CloseConnectionAsync();
+                    return Ok("connected");
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("not connected");
+            }
+
+
         }
 
         //[HttpGet(Name = "ConnectionString")]
