@@ -40,6 +40,6 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
-//app.MapMDtdEndpoints();
+
 app.MapEndpoints();
 app.Run();
