@@ -24,12 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SimpleCliniq.Common.Application\SimpleCliniq.Common.Application.csproj" />
-    <ProjectReference Include="..\SimpleCliniq.Common.Domain\SimpleCliniq.Common.Domain.csproj" />
-    <ProjectReference Include="..\SimpleCliniq.Common.Infrastructure\SimpleCliniq.Common.Infrastructure.csproj" />
-    <ProjectReference Include="..\SimpleCliniq.Common.Presentation\SimpleCliniq.Common.Presentation.csproj" />
-    <ProjectReference Include="..\SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj" />
-    <ProjectReference Include="..\SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\SimpleCliniq.Common.Infrastructure\SimpleCliniq.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\SimpleCliniq.Common.Application\SimpleCliniq.Common.Application.csproj" />
+    <ProjectReference Include="..\..\Common\SimpleCliniq.Common.Domain\SimpleCliniq.Common.Domain.csproj" />
+    <ProjectReference Include="..\..\Common\SimpleCliniq.Common.Presentation\SimpleCliniq.Common.Presentation.csproj" />
+
+    <ProjectReference Include="..\..\Modules\Core\SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Modules\Core\SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

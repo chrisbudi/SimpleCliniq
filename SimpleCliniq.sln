@@ -11,23 +11,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{EE28
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2AF43089-A6F1-491E-8BFE-40365E971783}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Infrastructure", "SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj", "{B1D7BD31-C112-464D-A12B-F46F2A75862C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Infrastructure", "src\Modules\Core\SimpleCliniq.Module.Core.Infrastructure\SimpleCliniq.Module.Core.Infrastructure.csproj", "{B1D7BD31-C112-464D-A12B-F46F2A75862C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Domain", "SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj", "{B69ECC25-57FC-441D-8422-1FA3613ACAC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Module.Core.Domain", "src\Modules\Core\SimpleCliniq.Module.Core.Domain\SimpleCliniq.Module.Core.Domain.csproj", "{B69ECC25-57FC-441D-8422-1FA3613ACAC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Api", "SimpleCliniq.Api\SimpleCliniq.Api.csproj", "{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Api", "src\API\SimpleCliniq.Api\SimpleCliniq.Api.csproj", "{3C2188BB-28FE-40AC-BD43-653F40F4DEBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCliniq.Module.Core.Presentation", "..\SimpleCliniq.Module.Core.Presenter\SimpleCliniq.Module.Core.Presentation.csproj", "{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCliniq.Module.Core.Presentation", "src\Modules\Core\SimpleCliniq.Module.Core.Presenter\SimpleCliniq.Module.Core.Presentation.csproj", "{3B2C648D-354F-4EC6-BE4D-E7F281E3A7B6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{0C2E1581-A036-4813-8018-7E202D67F4C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Presentation", "SimpleCliniq.Common.Presentation\SimpleCliniq.Common.Presentation.csproj", "{848C78EE-39B1-4A14-A07D-31D0183BAEF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Presentation", "src\Common\SimpleCliniq.Common.Presentation\SimpleCliniq.Common.Presentation.csproj", "{848C78EE-39B1-4A14-A07D-31D0183BAEF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Domain", "SimpleCliniq.Common.Domain\SimpleCliniq.Common.Domain.csproj", "{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Domain", "src\Common\SimpleCliniq.Common.Domain\SimpleCliniq.Common.Domain.csproj", "{993BC39A-E02C-44F5-AC49-3B1A16B05DDC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Infrastructure", "SimpleCliniq.Common.Infrastructure\SimpleCliniq.Common.Infrastructure.csproj", "{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Infrastructure", "src\Common\SimpleCliniq.Common.Infrastructure\SimpleCliniq.Common.Infrastructure.csproj", "{6D23BE26-7D8D-44A1-9E88-53CF3DF57366}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Application", "SimpleCliniq.Common.Application\SimpleCliniq.Common.Application.csproj", "{FB9972DE-A424-491B-A4E2-EE660B794799}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleCliniq.Common.Application", "src\Common\SimpleCliniq.Common.Application\SimpleCliniq.Common.Application.csproj", "{FB9972DE-A424-491B-A4E2-EE660B794799}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB7F1962-72D8-487F-9D5B-F0CD50844335}"
 	ProjectSection(SolutionItems) = preProject
