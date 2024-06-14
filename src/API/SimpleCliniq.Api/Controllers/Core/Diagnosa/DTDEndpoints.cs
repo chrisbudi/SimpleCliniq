@@ -2,7 +2,8 @@
 using SimpleCliniq.Common.Presentation.Endpoints;
 using SimpleCliniq.Module.Core.Domain.Models;
 using SimpleCliniq.Module.Core.Infrastructure;
-namespace SimpleCliniq.Api.Controllers.Core.Diagnosa;
+
+namespace Controllers.Core.Diagnosa;
 
 public class DTDEndpoints : IEndpoint
 {

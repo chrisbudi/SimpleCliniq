@@ -4,10 +4,6 @@
   <ItemGroup Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
   </ItemGroup>
   <PropertyGroup>
-    <AssemblyName></AssemblyName>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <RootNamespace />
     <UserSecretsId>55b3367d-8254-49e6-ae23-5fe561c975c7</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>

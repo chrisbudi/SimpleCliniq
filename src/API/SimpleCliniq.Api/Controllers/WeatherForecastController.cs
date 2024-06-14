@@ -27,7 +27,7 @@ namespace SimpleCliniq.Controllers
         public async Task<IActionResult> Get()
         {
             // check database connected
-            var connectionString = _config.GetValue<string>("DB_CONNECTION_STRING");
+            var connectionString = _config.GetConnectionString("DefaultConnection");
             var options = new DbContextOptionsBuilder<SimpleClinicContext>()
                 .UseNpgsql(connectionString)
                 .Options;
@@ -43,7 +43,7 @@ namespace SimpleCliniq.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("not connected");
+                return BadRequest(ex);
             }
 
 
